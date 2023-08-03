@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pathfinder.MainPage"
+             xmlns:viewmodel="clr-namespace:Pathfinder.ViewModel"
+             x:DataType="viewmodel:MainViewModel">
+
+    
+	
+	<ListView ItemsSource="{Binding Character.AbilityScores}">
+		<ListView.ItemTemplate>
+			<DataTemplate>
+				<Label Text="{Binding Path=Key}"></Label>
+			</DataTemplate>
+		</ListView.ItemTemplate>
+	</ListView>
+
+	<!--<Grid ColumnDefinitions="25*, 75*">
+        <Entry Text="{Binding Character.Strength}"></Entry>
+        <Entry Text="{Binding Character.Dexterity}"></Entry>
+        <Entry Text="{Binding Character.Constitution}"></Entry>
+        <Entry Text="{Binding Character.Intellect}"></Entry>
+        <Entry Text="{Binding Character.Wisdom}"></Entry>
+        <Entry Text="{Binding Character.Charisma}"></Entry>
+    </Grid>-->
+
+</ContentPage>
