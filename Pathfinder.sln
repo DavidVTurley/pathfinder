@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.33920.267
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pathfinder", "Pathfinder\Pathfinder.csproj", "{D611B24D-9E9C-45A3-94BC-C2E3D5C9CE24}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DND Pathfinder", "DND Pathfinder\DND Pathfinder.csproj", "{1BD581A1-2DA9-4335-A7BC-6A0FF3171D71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DND Pathfinder", "DND Pathfinder\DND Pathfinder.csproj", "{1BD581A1-2DA9-4335-A7BC-6A0FF3171D71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,12 +11,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D611B24D-9E9C-45A3-94BC-C2E3D5C9CE24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D611B24D-9E9C-45A3-94BC-C2E3D5C9CE24}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D611B24D-9E9C-45A3-94BC-C2E3D5C9CE24}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{D611B24D-9E9C-45A3-94BC-C2E3D5C9CE24}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D611B24D-9E9C-45A3-94BC-C2E3D5C9CE24}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D611B24D-9E9C-45A3-94BC-C2E3D5C9CE24}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{1BD581A1-2DA9-4335-A7BC-6A0FF3171D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1BD581A1-2DA9-4335-A7BC-6A0FF3171D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BD581A1-2DA9-4335-A7BC-6A0FF3171D71}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
