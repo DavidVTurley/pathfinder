@@ -1,11 +1,9 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-
-namespace Pathfinder;
+﻿namespace Pathfinder.Models;
 
 public partial class SkillManager : ObservableObject
 {
     [ObservableProperty]
-    public Dictionary<Skill, SkillData> skills = new();
+	private Dictionary<Skill, SkillData> _skills = new();
 
 
     public SkillManager()
@@ -14,14 +12,13 @@ public partial class SkillManager : ObservableObject
     }
     public SkillManager(Dictionary<Skill, SkillData> skills)
     {
-        this.skills = skills;
+        this.Skills = skills;
     }
-
 
 
     public SkillData GetSkill(Skill skill)
     {
-        return skills[skill];
+        return Skills[skill];
     }
 }
 

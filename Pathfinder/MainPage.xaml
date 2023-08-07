@@ -2,18 +2,20 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Pathfinder.MainPage"
+			 xmlns:model="clr-namespace:Pathfinder.Models"
              xmlns:viewmodel="clr-namespace:Pathfinder.ViewModel"
              x:DataType="viewmodel:MainViewModel">
 
-    
-	
-	<ListView ItemsSource="{Binding Character.AbilityScores}">
-		<ListView.ItemTemplate>
-			<DataTemplate>
-				<Label Text="{Binding Path=Key}"></Label>
+
+
+	<CollectionView ItemsSource="{Binding Character.AbilityScores}">
+		<CollectionView.ItemTemplate>
+			<DataTemplate x:DataType="model:AbilityScore">
+				<TextCell Text="{Binding Score}" Detail="Hellox"></TextCell>
 			</DataTemplate>
-		</ListView.ItemTemplate>
-	</ListView>
+		</CollectionView.ItemTemplate>
+	</CollectionView>
+
 
 	<!--<Grid ColumnDefinitions="25*, 75*">
         <Entry Text="{Binding Character.Strength}"></Entry>

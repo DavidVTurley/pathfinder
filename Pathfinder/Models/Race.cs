@@ -1,13 +1,11 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-
-namespace Pathfinder;
+﻿namespace Pathfinder.Models;
 
 public partial class Race : ObservableObject
 {
     [ObservableProperty]
-    public Dictionary<String, Int32> raceAbilityModifiers = new();
+    private Dictionary<String, Int32> _raceAbilityModifiers = new();
     [ObservableProperty]
-    public Dictionary<String, Int32> raceSkillModifiers = new();
+	private Dictionary<String, Int32> _raceSkillModifiers = new();
 
     public Race() { }
     public Race(Dictionary<string, int> raceSkillModifiers, Dictionary<string, int> raceAbilityModifiers)

@@ -1,17 +1,15 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
-
-namespace Pathfinder.Classes;
+﻿namespace Pathfinder.Models;
 
 public partial class AbilityScore : ObservableObject
 {
     [ObservableProperty]
-    public AbilityScoreEnum type;
+	private AbilityScoreEnum _type;
     [ObservableProperty]
-    public int score;
+	private int _score;
     [ObservableProperty]
-    public int misc;
+	private int _misc;
     [ObservableProperty]
-    public int temp;
+	private int _temp;
 
     public AbilityScore(AbilityScoreEnum type, int score, int misc, int temp)
     {
@@ -26,13 +24,14 @@ public partial class AbilityScore : ObservableObject
         return Score+Misc+Temp;
     }
 }
-
 public enum AbilityScoreEnum
 {
-    Strength,
-    Dexterity,
-    Constitution,
-    Wisdom,
-    Intelligence,
-    Charisma,
+	Strength,
+	Dexterity,
+	Constitution,
+	Wisdom,
+	Intelligence,
+	Charisma,
 }
+
+
