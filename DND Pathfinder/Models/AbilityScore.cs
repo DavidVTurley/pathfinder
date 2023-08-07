@@ -16,7 +16,7 @@
 
 		public AbilityScore(AbilityScoreTypeEnum type = default, int baseScore = 10, int temp = 0, int misc = 0)
 		{
-			_type = type;
+			Type = type;
 			BaseScore = baseScore;
 			Temp = temp;
 			Misc = misc;
