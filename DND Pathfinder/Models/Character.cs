@@ -12,10 +12,20 @@
 		private ObservableCollection<AbilityScore> _abilities;
 
 		public Character(String name, int age, ObservableCollection<AbilityScore> abilities)
+		[ObservableProperty]
+		private Dictionary<AbilityScore.AbilityScoreTypeEnum, AbilityScore> _abilities;
+
 		{
 			Name = name;
 			Age = age;
 			_abilities = abilities;
+			var temp = new Dictionary<AbilityScore.AbilityScoreTypeEnum, AbilityScore>();
+			foreach (AbilityScore ability in abilityScores)
+			{
+				temp.Add(ability.Type, ability);
+			}
+
+			Abilities = temp;
 		}
 
 		public static Character GetBaseCharacterSheet(String name = "Steve", 
@@ -27,7 +37,8 @@
 			Character character = new Character(
 				name, 
 				age, 
-				new ObservableCollection<AbilityScore>(abilityScores));
+				new List<AbilityScore>(abilityScores),
+				);
 
 			return character;
 		}
