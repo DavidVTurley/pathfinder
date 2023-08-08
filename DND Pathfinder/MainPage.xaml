@@ -8,8 +8,8 @@
 			 x:DataType="viewModel:MainViewModel">
 
 	<VerticalStackLayout>
-		<Label Text="{Binding Character.Abilities}"></Label>
-		<CollectionView ItemsSource="{Binding Character.Abilities}">
+		<Label Text="{Binding Character.Strength}"></Label>
+		<CollectionView ItemsSource="{Binding Character.AbilityScores}">
 			<CollectionView.ItemTemplate>
 				<DataTemplate x:DataType="model:AbilityScore">
 					<Label Text="{Binding Score}"></Label>

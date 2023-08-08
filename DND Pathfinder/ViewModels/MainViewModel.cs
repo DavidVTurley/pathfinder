@@ -1,4 +1,6 @@
-﻿namespace DND_Pathfinder.ViewModels
+﻿using CommunityToolkit.Mvvm.Input;
+
+namespace DND_Pathfinder.ViewModels
 {
 	public partial class MainViewModel: ObservableObject
 	{
@@ -8,7 +10,9 @@
 
 		public MainViewModel(Character character = null)
 		{
-			_character = character == null ? Character.GetBaseCharacterSheet() : character;
+			_character = character == null ? Character.GetTestCharacterSheet() : character;
 		}
+
+
 	}
 }

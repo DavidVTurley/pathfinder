@@ -6,9 +6,12 @@
     xmlns:local="clr-namespace:DND_Pathfinder"
     Shell.FlyoutBehavior="Disabled">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+	<TabBar>
+		<ShellContent
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+	</TabBar>
+    
 
 </Shell>

@@ -1,4 +1,5 @@
-﻿using DND_Pathfinder.ViewModels;
+﻿using CommunityToolkit.Mvvm.Input;
+using DND_Pathfinder.ViewModels;
 
 namespace DND_Pathfinder
 {
@@ -13,5 +14,7 @@ namespace DND_Pathfinder
 		
 			BindingContext = _viewModel;
 		}
+
+		
 	}
 }
