@@ -6,20 +6,20 @@ public class AbilityScoreManager
 {
     public ObservableCollection<AbilityScore> AbilityScores { get; }
 
-    public AbilityScoreManager(IEnumerable<AbilityScore> abilityScores, IEnumerable<AbilityModifier> modifiers = null)
+    public AbilityScoreManager(IEnumerable<AbilityScore> abilityScores, IEnumerable<AbilityAdjuster> modifiers = null)
     {
         AbilityScores = new ObservableCollection<AbilityScore>(abilityScores);
         
         if (modifiers != null)
         {
-            foreach (AbilityModifier modifier in modifiers)
+            foreach (AbilityAdjuster modifier in modifiers)
             {
                 AddAbilityModifier(modifier);
             }
         }
     }
 
-    public Boolean AddAbilityModifier(AbilityModifier modifier)
+    public Boolean AddAbilityModifier(AbilityAdjuster modifier)
     {
         AbilityScore score = GetAbilityScoreFromAbilityType(modifier.Type);
         if(score == null) 
@@ -28,7 +28,7 @@ public class AbilityScoreManager
         return score.AddAbilityModifier(modifier);
     }
 
-    public Boolean RemoveAbilityModifier(AbilityModifier modifier)
+    public Boolean RemoveAbilityModifier(AbilityAdjuster modifier)
     {
         AbilityScore score = GetAbilityScoreFromAbilityType(modifier.Type);
         if (score == null)

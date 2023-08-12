@@ -19,10 +19,12 @@
 			<Grid.ColumnDefinitions>
 				<ColumnDefinition Width="75" />
 				<ColumnDefinition Width="50" />
+				<ColumnDefinition Width="50" />
 			</Grid.ColumnDefinitions>
 
 			<Label Grid.Column="0" Text="Total" />
-			<Label Grid.Column="1" Text="Temp" />
+			<Label Grid.Column="1" Text="Mod" />
+			<Label Grid.Column="2" Text="Temp" />
 
 		</Grid>
 		<CollectionView ItemsSource="{Binding Character.AbilityScoreManager.AbilityScores}">
@@ -32,11 +34,13 @@
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="75" />
 							<ColumnDefinition Width="50" />
+							<ColumnDefinition Width="50" />
 						</Grid.ColumnDefinitions>
 
 
 						<Label Grid.Column="0" Text="{Binding TotalScore}" />
-						<Entry Grid.Column="1" Text="{Binding TempScore}" />
+						<Label Grid.Column="1" Text="{Binding Modifier}" />
+						<Entry Grid.Column="2" Text="{Binding TempScore}" />
 					</Grid>
 				</DataTemplate>
 			</CollectionView.ItemTemplate>
