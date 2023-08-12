@@ -1,8 +1,8 @@
 ﻿using ObjCRuntime;
 using UIKit;
 
-namespace DND_Pathfinder
-{
+namespace DND_Pathfinder;
+
 	public class Program
 	{
 		// This is the main entry point of the application.
@@ -13,4 +13,3 @@ namespace DND_Pathfinder
 			UIApplication.Main(args, null, typeof(AppDelegate));
 		}
 	}
-}

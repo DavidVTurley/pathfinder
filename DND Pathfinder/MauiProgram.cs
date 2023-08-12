@@ -1,8 +1,8 @@
 ﻿using DND_Pathfinder.ViewModels;
 using Microsoft.Extensions.Logging;
 
-namespace DND_Pathfinder
-{
+namespace DND_Pathfinder;
+
 	public static class MauiProgram
 	{
 		public static MauiApp CreateMauiApp()
@@ -26,4 +26,3 @@ namespace DND_Pathfinder
 			return builder.Build();
 		}
 	}
-}

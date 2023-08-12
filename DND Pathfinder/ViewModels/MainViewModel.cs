@@ -1,18 +1,28 @@
-﻿using CommunityToolkit.Mvvm.Input;
+﻿namespace DND_Pathfinder.ViewModels;
 
-namespace DND_Pathfinder.ViewModels
-{
-	public partial class MainViewModel: ObservableObject
+public partial class MainViewModel : BaseNotifyPropertyChanged
 	{
-		[ObservableProperty]
-		private Character _character;
+		public Character Character {
+			get;
+			init;
+		}
 
 
 		public MainViewModel(Character character = null)
 		{
-			_character = character == null ? Character.GetTestCharacterSheet() : character;
+			Character = character ?? new Character("Steve",
+				new AbilityScoreManager(
+					new ObservableCollection<AbilityScore>() {
+							new AbilityScore(AbilityType.Strength),
+							new AbilityScore(AbilityType.Dexterity),
+							new AbilityScore(AbilityType.Constitution),
+							new AbilityScore(AbilityType.Wisdom),
+							new AbilityScore(AbilityType.Intelligence),
+							new AbilityScore(AbilityType.Charisma),
+					}));
+
+
+
+
 		}
-
-
 	}
-}

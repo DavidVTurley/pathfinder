@@ -1,5 +1,5 @@
-﻿namespace DND_Pathfinder
-{
+﻿namespace DND_Pathfinder;
+
 	public partial class App : Application
 	{
 		public App()
@@ -9,4 +9,3 @@
 			MainPage = new AppShell();
 		}
 	}
-}
