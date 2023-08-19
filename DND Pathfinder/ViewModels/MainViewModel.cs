@@ -1,4 +1,6 @@
-﻿namespace DND_Pathfinder.ViewModels;
+﻿using DND_Pathfinder.Models.Races;
+
+namespace DND_Pathfinder.ViewModels;
 
 public partial class MainViewModel : BaseNotifyPropertyChanged
 	{
@@ -10,16 +12,19 @@ public partial class MainViewModel : BaseNotifyPropertyChanged
 
 		public MainViewModel(Character character = null)
 		{
-			Character = character ?? new Character("Steve",
-				new AbilityScoreManager(
-					new ObservableCollection<AbilityScore>() {
+		Character = character ?? new Character(
+			"Steve",
+			new AbilityScoreManager(
+				new ObservableCollection<AbilityScore>() {
 							new AbilityScore(AbilityType.Strength),
 							new AbilityScore(AbilityType.Dexterity),
 							new AbilityScore(AbilityType.Constitution),
 							new AbilityScore(AbilityType.Wisdom),
 							new AbilityScore(AbilityType.Intelligence),
 							new AbilityScore(AbilityType.Charisma),
-					}));
+				}),
+			new Human("Human", "Humanoid", "Human", AbilityType.Strength, Enumerable.Empty<AbilityAdjuster>())
+			);
 
 
 

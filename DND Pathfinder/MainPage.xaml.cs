@@ -16,6 +16,13 @@ public partial class MainPage : ContentPage
 
 	private void AddAbilityModifier(object sender, EventArgs e)
 	{
+		AbilityAdjuster abilityScore = new AbilityAdjuster(AbilityType.Strength, "", 2);
+		_viewModel.Character.Race.AbilityAdjustment.Add(abilityScore);
+    }
 
+    private void RemoveAbilityModifier(object sender, EventArgs e)
+    {
+        AbilityAdjuster abilityScore = new AbilityAdjuster(AbilityType.Strength, "", 2);
+        _viewModel.Character.Race.AbilityAdjustment.Remove(abilityScore);
     }
 }
