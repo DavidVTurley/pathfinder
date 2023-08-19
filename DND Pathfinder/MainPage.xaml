@@ -47,6 +47,7 @@
 		</CollectionView>
 
 		<Button Pressed="AddAbilityModifier" Text="Press To Add Ability Modifier" />
+		<Button Pressed="RemoveAbilityModifier" Text="Press To Remove Ability Modifier" />
 	</StackLayout>
 
 	<!--<StackLayout>
