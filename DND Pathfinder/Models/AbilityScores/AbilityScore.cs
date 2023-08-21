@@ -35,7 +35,7 @@ public class AbilityScore : BaseNotifyPropertyChanged
             return (int)Math.Floor(score / 2);
         }
     }
-    private void TotalScoreNeedsToChange()
+    private void OnPropertyChanged_TotalScoreAndModifier()
     {
         OnPropertyChanged(nameof(TotalScore));
         OnPropertyChanged(nameof(Modifier));
@@ -44,13 +44,13 @@ public class AbilityScore : BaseNotifyPropertyChanged
 
     public Int32 BaseScore
 	{
-		get { return _baseScore; }
+        get { return _baseScore; }
 		set
 		{
 			if (_baseScore == value) return;
 			_baseScore = value;
 			OnPropertyChanged();
-            TotalScoreNeedsToChange();
+            OnPropertyChanged_TotalScoreAndModifier();
         }
     }
 	public Int32 TempScore
@@ -61,7 +61,7 @@ public class AbilityScore : BaseNotifyPropertyChanged
 			if (_tempScore == value) return;
 			_tempScore = value;
 			OnPropertyChanged();
-            TotalScoreNeedsToChange();
+            OnPropertyChanged_TotalScoreAndModifier();
         }
     }
 
@@ -85,14 +85,14 @@ public class AbilityScore : BaseNotifyPropertyChanged
 
 
         _abilityAdjustments.Add(modifier);
-        TotalScoreNeedsToChange();
+        OnPropertyChanged_TotalScoreAndModifier();
         return true;
     }
 	public Boolean RemoveAbilityModifier(AbilityAdjuster modifier)
 	{
         if (!_abilityAdjustments.Remove(modifier)) return false;
 
-        TotalScoreNeedsToChange();
+        OnPropertyChanged_TotalScoreAndModifier();
         return true;
 	}
 	public Boolean RemoveAbilityModifier(String nameOfModifier)
